@@ -14,4 +14,6 @@ tar -xzf "$download_dir/e1s.tar.gz" -C "$download_dir"
 [ ! -d "$bin_dir" ] && mkdir -p "$bin_dir"
 cp "$download_dir/e1s" "$bin_dir"
 
+rm -rf "$download_dir"
+
 echo "e1s ${version} installed successfully"
