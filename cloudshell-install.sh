@@ -2,7 +2,7 @@
 
 set -eu
 
-version="1.0.17"
+version="1.0.27"
 download_dir="$HOME/e1s_downloads/${version}"
 bin_dir="$HOME/.local/bin"
 
