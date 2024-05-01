@@ -2,7 +2,13 @@
 
 set -eu
 
-version="1.0.29"
+# if there is an argument, then use it as the version, else use the latest version
+if [ $# -eq 1 ]; then
+  version=$1
+else
+  version=$(curl -s https://api.github.com/repos/keidarcy/e1s/releases/latest | jq -r '.tag_name')
+fi
+
 download_dir="$HOME/e1s_downloads/${version}"
 bin_dir="$HOME/.local/bin"
 
