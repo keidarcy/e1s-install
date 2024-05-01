@@ -9,7 +9,7 @@ else
   version=$(curl -s https://api.github.com/repos/keidarcy/e1s/releases/latest | jq -r '.tag_name')
 fi
 
-echo "version: ${version}"
+# echo "version: ${version}"
 
 download_dir="$HOME/e1s_downloads/${version}"
 bin_dir="$HOME/.local/bin"
@@ -18,7 +18,7 @@ bin_dir="$HOME/.local/bin"
 
 url="https://github.com/keidarcy/e1s/releases/download/${version}/e1s_${version:1}_linux_amd64.tar.gz"
 
-echo "URL: ${url}"
+# echo "URL: ${url}"
 
 curl -o "$download_dir/e1s.tar.gz" -sSLf $url
 tar -xzf "$download_dir/e1s.tar.gz" -C "$download_dir"
