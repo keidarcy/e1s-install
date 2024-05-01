@@ -14,7 +14,7 @@ bin_dir="$HOME/.local/bin"
 
 [ ! -d "$download_dir" ] && mkdir -p "$download_dir"
 
-url="https://github.com/keidarcy/e1s/releases/download/${version}/e1s_${version}_linux_amd64.tar.gz"
+url="https://github.com/keidarcy/e1s/releases/download/${version}/e1s_${version:1}_linux_amd64.tar.gz"
 
 curl -o "$download_dir/e1s.tar.gz" -sSLf $url
 tar -xzf "$download_dir/e1s.tar.gz" -C "$download_dir"
